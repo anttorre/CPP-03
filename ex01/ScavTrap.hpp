@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 13:36:03 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/12 14:29:19 by anttorre         ###   ########.fr       */
+/*   Created: 2024/06/12 13:55:40 by anttorre          #+#    #+#             */
+/*   Updated: 2024/06/12 15:57:03 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
+#include <iostream>
 #include "ClapTrap.hpp"
 
-int	main()
+class ScavTrap : public ClapTrap
 {
-	ClapTrap trap("Wakanda");
-
-	trap.attack("Virus");
-	trap.takeDamage(8);
-	trap.beRepaired(2);
-	for (int i = 0; i < 10; i++)
-		trap.attack("Pepe");
-	trap.takeDamage(6);
-	trap.takeDamage(6);
-	trap.beRepaired(3);
-}
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap &other);
+		~ScavTrap();
+		ScavTrap& operator=(ScavTrap &other);
+		void	attack(const std::string &target);
+		void	guardGate();
+};

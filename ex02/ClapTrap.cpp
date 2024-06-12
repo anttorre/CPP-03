@@ -6,7 +6,7 @@
 /*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:36:01 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/12 14:28:59 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/12 16:22:20 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "Default constructor called.\n";
+	std::cout << "ClapTrap default constructor called.\n";
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Default param constructor called\n";
+	std::cout << "ClapTrap default param constructor called\n";
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap &other)
 {
-	std::cout << "Copy constructor called\n";
+	std::cout << "ClapTrap Copy constructor called\n";
 	this->_name = other._name;
 	this->_hitPoints = other._hitPoints;
 	this->_energyPoints = other._energyPoints;
@@ -37,12 +37,12 @@ ClapTrap::ClapTrap(ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "ClapTrap Destructor called\n";
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap &other)
 {
-	std::cout << "Operator Asignment Called\n";
+	std::cout << "ClapTrap Operator Asignment Called\n";
 	if (this != &other)
 	{
 		this->_name = other._name;

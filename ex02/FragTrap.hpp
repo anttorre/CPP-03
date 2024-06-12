@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 13:36:03 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/12 14:29:19 by anttorre         ###   ########.fr       */
+/*   Created: 2024/06/12 17:18:21 by anttorre          #+#    #+#             */
+/*   Updated: 2024/06/12 17:22:02 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "ClapTrap.hpp"
 
-int	main()
+class FragTrap : public ClapTrap
 {
-	ClapTrap trap("Wakanda");
-
-	trap.attack("Virus");
-	trap.takeDamage(8);
-	trap.beRepaired(2);
-	for (int i = 0; i < 10; i++)
-		trap.attack("Pepe");
-	trap.takeDamage(6);
-	trap.takeDamage(6);
-	trap.beRepaired(3);
-}
+	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(FragTrap &other);
+		~FragTrap();
+		FragTrap& operator=(FragTrap &other);
+		void	attack(const std::string &target);
+		void	highFiveGuys();
+};
