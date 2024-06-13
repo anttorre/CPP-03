@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anttorre <anttorre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:18:21 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/12 17:22:02 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 13:13:38 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap();
