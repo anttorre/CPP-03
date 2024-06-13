@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anttorre <anttorre@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:36:03 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/13 13:33:08 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:41:40 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ int	main()
 	std::cout << std::endl;
 
 	DiamondTrap trap4("Rough Diamond");
-	trap4.whoAmI();
 	trap4.takeDamage(25);
 	trap4.beRepaired(25);
 	for (int i = 0; i < 50; i++)
@@ -65,6 +64,7 @@ int	main()
 	trap4.takeDamage(90);
 	trap4.takeDamage(10);
 	trap4.beRepaired(3);
+	trap4.whoAmI();
 
 	std::cout << std::endl;
 }

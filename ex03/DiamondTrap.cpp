@@ -3,27 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anttorre <anttorre@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:47:11 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/13 13:28:53 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:48:36 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap()
-{
-}
 
-DiamondTrap::DiamondTrap(std::string name)
-	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
+
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
 	std::cout << "DiamondTrap param constructor called\n";
-	this->_name = name;
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	_name = name;
+	_hitPoints = FragTrap::_hitPoints;
+	_energyPoints = ScavTrap::_energyPoints;
+	_attackDamage = FragTrap::_attackDamage;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -52,5 +49,5 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap &other)
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap name " << this->_name << ", ClapTrap name: " << ClapTrap::_name << std::endl;
+	std::cout << "DiamondTrap name " << _name << ", ClapTrap name: " << (ClapTrap::_name += "_clap_name") << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: anttorre <anttorre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:36:01 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/12 16:22:20 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:41:19 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "ClapTrap default param constructor called\n";
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
 	this->_name = name;
+	std::cout << "ClapTrap default param constructor called " << this->_name << std::endl;
+
 }
 
 ClapTrap::ClapTrap(ClapTrap &other)
