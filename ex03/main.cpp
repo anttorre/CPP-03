@@ -6,13 +6,14 @@
 /*   By: anttorre <anttorre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:36:03 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/13 13:25:36 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 13:33:08 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main()
 {
@@ -56,6 +57,14 @@ int	main()
 	std::cout << std::endl;
 
 	DiamondTrap trap4("Rough Diamond");
+	trap4.whoAmI();
+	trap4.takeDamage(25);
+	trap4.beRepaired(25);
+	for (int i = 0; i < 50; i++)
+		trap4.attack(trap.getName());
+	trap4.takeDamage(90);
+	trap4.takeDamage(10);
+	trap4.beRepaired(3);
 
 	std::cout << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: anttorre <anttorre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:47:11 by anttorre          #+#    #+#             */
-/*   Updated: 2024/06/13 13:24:26 by anttorre         ###   ########.fr       */
+/*   Updated: 2024/06/13 13:28:53 by anttorre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ DiamondTrap::DiamondTrap()
 }
 
 DiamondTrap::DiamondTrap(std::string name)
-	: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
+	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
 	std::cout << "DiamondTrap param constructor called\n";
 	this->_name = name;

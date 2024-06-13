@@ -12,7 +12,7 @@ RESET	:= \033[0m
 CC = clang++
 CFLAGS = -g -fsanitize=address,undefined -Wall -Werror -Wextra 
 #-fsanitize=address,undefined
-NAME = FragTrap
+NAME = DiamondTrap
 
 STD = -std=c++98
 
